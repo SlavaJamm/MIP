@@ -1,0 +1,87 @@
+//footer
+.footer{
+    padding-top: 3rem;
+    color: $white;
+    .subscribe{        
+        margin-bottom: 3rem;
+        .footer__subscribe{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            p{
+                display: inline-block;
+                margin-bottom: .1rem;
+                font-size: 1rem;
+            }
+            form{
+                display: inline-flex;
+                justify-content: space-between;
+                input{
+                    font-size: .7rem;
+                    padding: .5rem 1rem;
+                    min-width: 250px;
+                    margin-right: .5rem;
+                }
+                button{
+                    display: inline-block;
+                    font-size: 1.3rem;
+                    padding: .3rem 1.3rem;            
+                    min-width: unset;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .footer__navbar{
+        font-size: 16px;
+        margin-bottom: 10rem;
+        .footer__navbar__title{
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 18px;
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+            li{
+                a{
+                    color: $white;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .copyright{
+        font-size: 14px;
+        padding-bottom: 3rem;
+    }
+}
+@media (max-width: 1024px){
+    .footer {
+        .subscribe{
+            .footer__subscribe{
+                margin-top: 2rem;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+    }
+}
+@media (max-width: 450px){
+    .footer {
+        .subscribe{
+            .footer__subscribe{
+                form{           
+                    input{
+                        margin-right: 0;
+                        margin-bottom: 0.5rem;
+                    }         
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

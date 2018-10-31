@@ -1,0 +1,129 @@
+
+// header
+.header{
+    color: $white;
+    background-color: $blue-dark;
+    .head{
+        .head__logos{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .vertical-divider{
+                display: inline-block;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                width: 1px;
+                height: 100%;
+                background-color: $white;
+            }
+            img{
+                padding-top: 1rem;
+            }
+        }
+        .head__nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: .6rem;
+            .vertical-divider{
+                display: inline-block;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                width: 1px;
+                height: 20px;
+                background-color: $white;
+            } 
+            a{        
+                height: 20px;
+                display: flex;
+                img{
+                    height: 100%;
+                }
+            }   
+            .head__nav__search{
+                color: $secondary;
+                &:hover{
+                    text-decoration: none;
+                }
+                .head__nav__search-text{
+                    display: flex;
+                    align-items: center;
+                }
+                .head__nav__search-icon{
+                    margin-left: 10px;
+                }                
+            }
+        }
+    }
+    .navbar-primary{
+        background-color: transparent;
+        padding: 0;
+        margin-top: 2rem;
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }        
+        a{
+            color: $white;
+        }
+        .navbar-nav{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .nav-link.dropdown-toggle{
+                border: 2px transparent solid;
+                &[aria-expanded="true"]{
+                    border: 2px $secondary solid;
+                }
+            }
+            .dropdown-menu{
+                border: 1px $secondary solid;
+                min-width: 18rem;
+                border-radius: unset;
+                margin: 0;
+                padding: 0.8rem 0;
+                a{
+                    padding: .5rem 1.5rem;
+                    color: $link-color;
+                    &:hover{
+                        background-color: $secondary;
+                    }
+                }
+            }
+        }
+    }
+}
+//media
+@media (max-width: 1024px){
+    .header{
+        .menu{
+            .navbar-primary{
+                .navbar-nav{
+                    align-items: start;
+                    .dropdown-menu{
+                        position: absolute;
+                    }
+                    .nav-item{
+                        &.show{
+                            .nav-link{
+                                justify-content: left;
+                            }
+                        }
+                    }
+                    .nav-link{
+                        padding: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 450px){
+    .header{
+        .head{
+            .head__nav{
+                margin-top: 1rem;
+            }
+        }
+    }
+}

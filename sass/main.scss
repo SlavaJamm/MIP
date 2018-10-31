@@ -1,0 +1,187 @@
+@import "../libs/bootstrap/scss/bootstrap";
+
+:root{
+    font-size: $font-size-base;
+}
+
+@import "../libs/slick/slick.scss";
+@import "../libs/slick/slick-theme.scss";
+@import "partials/_buttons";
+@import "partials/_cards";
+@import "partials/_head";
+@import "partials/_footer";
+
+// action button
+.action-button{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &:hover{
+        text-decoration: none;
+    }
+    // action button different sizes: --xl, --lg, --xs
+    &.--xl{
+        background-color: $white;
+        height: 100%;
+        @media screen and (max-width: $grid-breakpoints(sm)) {
+            height: unset;
+            margin-bottom: 2rem;
+        }
+        &:hover{
+            background-color: $secondary;
+        }
+        .action-button__title{
+            font-weight: bold;
+            color: $black;
+            margin-bottom: 1rem;
+            font-size: 1.75rem;
+        }
+        .action-button__description{
+            color: $blue;
+            text-decoration: underline;
+        }
+        .action-button__links{
+            a{
+                color: $blue;
+                text-decoration: underline;
+                display: block;
+            }
+        }
+    }
+    &.--lg{
+        background-color: $primary;
+        color: $white;
+        height: 100%;
+        @media screen and (max-width: $grid-breakpoints(sm)) {
+            height: unset;
+            margin-bottom: 2rem;
+        }
+        &:hover{
+            background-color: $primary-dark;
+        }
+        h5{
+            margin: 0;
+        }
+        p{
+            margin: 0;
+        }
+    }
+    &.--xs{
+        background-color: $secondary;
+        color: $black;
+        min-width: 130px;
+        font-size: .85rem;
+        font-weight: bold;
+        padding: .5rem 1.8rem;
+    }
+}
+// default:
+// root
+:root{
+    font-size: $font-size-base;
+    @media screen and (max-width: $grid-breakpoints(xl)){
+        font-size: 14px;
+    }
+    @media screen and (max-width: $grid-breakpoints(md)){
+        font-size: 12px;
+    }
+}
+// body
+body{
+    font-family: $font-family-sans-serif;
+    color: $black;
+}
+::selection{
+    color: $black;
+    background-color: $secondary;
+}
+
+// custom:
+// main page
+.main-page{
+    background: url(../image/main-page-bg.png) center top no-repeat, url(../image/main-page-bg--bottom.png) center bottom no-repeat;
+    .header{
+        margin-bottom: 18rem;
+        background: transparent;
+    }
+    .second-action{
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+    .updates{
+        margin-top: 10rem;
+        @media screen and (max-width: $grid-breakpoints(sm)) {
+           margin-top: unset;
+        }
+        .updates__section{
+            @media screen and (max-width: $grid-breakpoints(sm)) {
+                margin-top: 2rem;
+            }
+        }
+        .updates__section__header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .updates__section__header__title{
+            font-weight: bold;
+            margin: 0;
+            font-size: 1.4rem;
+        }
+        //news
+        .news{
+            .updates__section__news__item{
+                margin-top: 2rem;
+                .updates__section__news__item__title{
+                    color: $black;
+                    &:hover{
+                        color: $blue;
+                    }
+                }
+                .updates__section__news__item__date{
+                    color: $gray-500;
+                    font-size: .85rem;
+                    margin-top: .7rem;
+                }
+            }
+        }
+    }
+    .media{
+        margin-top: 3.5rem;
+        .media__section__header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .media__section__header__title{
+            font-weight: bold;
+            margin: 0;
+        }
+    }
+    .partners{
+        margin-top: 3rem;
+        .partners__block{
+            display: flex;
+            align-items: center;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .quote{
+        color: $white;
+        margin-top: 30rem;
+        margin-bottom: 1.5rem;
+        q{
+            font-style: italic;
+        }
+        p{
+            margin-top: .7rem;
+        }
+    }
+    .footer{
+        background-color: transparent;
+    }
+}
